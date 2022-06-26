@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: Raleway;
+}
+
+body {
+    background-color: #F5FAFF;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6777ef;
+    color: white;
+    margin-bottom: 30px;
+}
+
+main {
+    overflow: auto;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+#new_book {
+    float: left;
+    width: 30%;
+}
+
+#book_shelf {
+    float: right;
+    width: 70%;
+    padding-left: 30px;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 35px;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: #6777ef;
+}
+
+.inputBook {
+    padding-top: 25px;
+}
+
+.input_section > form > .btnSubmit {
+    padding-top: 10px;
+}
+
+.input_section > form > .btnSubmit > button {
+    background-color: #6777ef;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > .btnSubmit > #incompleteSubmit {
+    width: 100%;
+}
+
+.input_section > form > #btnReset {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > .input {
+    margin-bottom: 20px;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    background: #F5F1FF;
+    border: 2px solid #6777ef;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.input_section > form > .input > label {
+    font-size: 18;
+    font-weight: lighter;
+}
+
+.shelf_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf_section > h2, h3 {
+    color: #6777ef;
+    text-align: center;
+}
+
+.shelf_section > .book_list {
+    padding-top: 25px;
+    overflow: auto;
+}
+
+.shelf_section > .book_list > .incompleteBookshelfList {
+    border: 1px solid #6777ef;
+    border-radius: 12px;
+    padding: 16px;
+    float: left;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.shelf_section > .book_list > .completeBookshelfList {
+    border: 1px solid #6777ef;
+    border-radius: 12px;
+    padding: 16px;
+    float: right;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.item {
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items:center;
+    width: 400px;
+}
+
+.item > .inner h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.item > .inner p {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.check-button {
+    background: url('../assets/check-outline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('../assets/check-solid.svg');
+    background-size: contain;
+}
+
+.trash-button{
+    background: url('../assets/trash-outline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('../assets/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button{
+    background: url('../assets/undo-ouline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('../assets/undo-ouline.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.search_section > h2 {
+    color: #6777ef;
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > form > input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search_section > form > button {
+    background-color: #6777ef;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    #new_book {
+        width: 100%;
+        padding: 0px 24px 0px 24px;
+    }
+
+    #book_shelf {
+        width: 100%;
+        padding: 0px 24px 0px 24px;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .check-button {
+        margin-left: 10px;
+    }
+
+    .undo-button {
+        margin-left: 10px;
+    }
+}

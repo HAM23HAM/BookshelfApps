@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+</header>
+<main>
+    <section id="new_book">
+        <div id="add-book" class="card">
+            <div class="input_section">
+                <h2>Tambah Buku baru</h2>
+                <form class="inputBook" id="form">
+                    <div class="input">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="btnSubmit">
+                        <button id="incompleteSubmit" type="submit">Masukkan buku ke rak</button>
+                    </div>
+                    <button id="btnReset" type="reset" value="Reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="book_shelf">
+        <div id="shelf" class="card">
+            <div class="shelf_section">
+                <h2>Rak Buku</h2>
+                <div class="book_list">
+                    <div class="incompleteBookshelfList">
+                        <h3>Belum selesai dibaca</h3>
+                        <div class="list-item" id="books">
+
+                        </div>
+                    </div>
+                    <div class="completeBookshelfList">
+                        <h3>Selesai dibaca</h3>
+                        <div class="list-item" id="completed-books">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
